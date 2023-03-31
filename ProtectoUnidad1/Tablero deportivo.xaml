@@ -1,0 +1,117 @@
+﻿<Window x:Class="ProtectoUnidad1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProtectoUnidad1"
+        mc:Ignorable="d"
+        Title="Tablero Deportivo" Height="350" Width="550" Background="Black" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   Grid.ColumnSpan="3" Foreground="White" FontSize="30" HorizontalAlignment="Center">Tiempo</TextBlock>
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Green"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="2"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock>9</TextBlock>
+                <TextBlock>:</TextBlock>
+                <TextBlock>52</TextBlock>
+            </StackPanel>
+        </Border>
+        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" FontSize="30" HorizontalAlignment="Center">Local</TextBlock>
+        <Border Grid.Row="3"  BorderBrush="White" BorderThickness="1" Margin="10 0" >
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Red"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="0 0"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBlock>1</TextBlock>
+                <TextBlock>3</TextBlock>
+                <TextBlock>2</TextBlock>
+            </WrapPanel>
+        </Border>
+        <TextBlock Grid.Row="2" Grid.Column="1" Foreground="White" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom">PERIODO</TextBlock>
+        <Border Grid.Row="3" Grid.Column="1" BorderBrush="White" BorderThickness="1" Margin="70 0">
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Green"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="0 0"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBlock>3</TextBlock>
+            </WrapPanel>
+        </Border>
+
+        <TextBlock Grid.Row="2" Grid.Column="2" Foreground="White" FontSize="30" HorizontalAlignment="Center">Visita</TextBlock>
+        <Border Grid.Row="3" Grid.Column="2"  BorderBrush="White" BorderThickness="1" Margin="10 0" >
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Red"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="0 0"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBlock>1</TextBlock>
+                <TextBlock>2</TextBlock>
+                <TextBlock>0</TextBlock>
+            </WrapPanel>
+        </Border>
+        <TextBlock Grid.Row="4" Foreground="White" FontSize="20" HorizontalAlignment="Center">Faltas</TextBlock>
+        <Border Grid.Row="5" BorderBrush="White" BorderThickness="1" Margin="70 0">
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Green"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="0 0"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBlock>3</TextBlock>
+            </WrapPanel>
+        </Border>
+
+        <TextBlock Grid.Row="4" Grid.Column="2" Foreground="White" FontSize="20" HorizontalAlignment="Center">Faltas</TextBlock>
+        <Border Grid.Row="5" Grid.Column="2" BorderBrush="White" BorderThickness="1" Margin="70 0">
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Green"/>
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontFamily" Value="Consolas"/>
+                        <Setter Property="Margin" Value="0 0"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBlock>2</TextBlock>
+            </WrapPanel>
+        </Border>
+    </Grid>
+</Window>

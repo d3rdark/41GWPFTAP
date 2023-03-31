@@ -1,0 +1,135 @@
+﻿<Window x:Class="ProtectoUnidad1.CalculadoraFracciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProtectoUnidad1"
+        WindowStyle="ToolWindow"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="" Height="400" Width="475" >
+    <DockPanel Background="#425E97">
+        <DockPanel.DataContext>
+            <local:OperacionesFracciones>
+
+            </local:OperacionesFracciones>
+        </DockPanel.DataContext>
+        <Border Margin="5 0 5 5" Background="#6200EE" DockPanel.Dock="Top" 
+                CornerRadius="0 0 30 30" 
+                
+                BorderThickness="5 0 5 5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Opacity=".5"></DropShadowEffect>
+            </Border.Effect>
+
+            <Grid Margin="2" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="40"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="FontFamily" Value="{StaticResource Kalam Bold}"/>
+                        <Setter Property="Foreground" Value="#F2E7FE"/>
+                        <Setter Property="TextWrapping" Value="Wrap"/>
+                    </Style>
+
+                    <Style x:Key="simbolo" TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="40"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="FontFamily" Value="{StaticResource Kalam Bold}"/>
+                        <Setter Property="Foreground" Value="#F2E7FE"/>
+                    </Style>
+
+                    <Style TargetType="TextBox">
+                        <Setter Property="FontSize" Value="40"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter  Property="Background" Value="Transparent"/>
+                        <Setter Property="FontFamily" Value="{StaticResource Kalam Bold}"/>
+                        <Setter Property="BorderBrush" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="#F2E7FE"/>
+
+                    </Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="10"/>
+                    </Style>
+                </Grid.Resources>
+                <StackPanel >
+                    <TextBox Text="{Binding NumeradorL}">
+                    </TextBox>
+                    <TextBlock>−</TextBlock>
+                    <TextBox Text="{Binding DenominadorL}"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="{Binding Simbolo}">
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBox Text="{Binding NumeradorR}"></TextBox>
+                    <TextBlock>−</TextBlock>
+                    <TextBox Text="{Binding DenominadorR}"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Column="3" >
+                    <TextBlock  Text="=" ></TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="4" >
+                    <TextBlock   Text="{Binding ReNumerador}" ></TextBlock>
+                    <TextBlock  Text="−" ></TextBlock>
+                    <TextBlock   Text="{Binding ReDenominador}" ></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Border HorizontalAlignment="Right" Background="White" Margin="10 35 0 10"
+                CornerRadius="30 0 0 30" 
+                BorderThickness="2 2 0 2" BorderBrush="Black">
+
+           
+            <WrapPanel  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 10">
+                <WrapPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="40"/>
+                        <Setter Property="Margin" Value="10 0 10 0"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Background" Value="#FBB31B"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="VerticalContentAlignment" Value="Top"/>
+                        <Setter Property="Width" Value="60"/>
+                        <Setter Property="Height" Value="60"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <Button Command="{Binding SumaComando}" Content="+">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="50"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Command="{Binding RestaComando}" Content="-">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="50"/>
+
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="30" VerticalContentAlignment="Center" Command="{Binding LimpiarComando}" Content="CE">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="50"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </WrapPanel>
+        </Border>
+    </DockPanel>
+</Window>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ListaComprasMVVM.Views.VerProductosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ListaComprasMVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Ribbon Title="Lista de compras" DockPanel.Dock="Top">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu Visibility="Collapsed"></RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="Acciones">
+                <RibbonGroup>
+                    <RibbonButton Command="{Binding CambiarVistaCommand}" CommandParameter="agregar" Label="Agregar" LargeImageSource="../Assets/add-to-basket.png"></RibbonButton>
+                    <RibbonButton Command="{Binding CambiarVistaCommand}" CommandParameter="editar" Label="Editar" LargeImageSource="../Assets/edit-basket.png"></RibbonButton>
+                    <RibbonButton Command="{Binding CambiarVistaCommand}" CommandParameter="eliminar" Label="Eliminar" LargeImageSource="../Assets/remove-from-basket.png"></RibbonButton>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+
+        <DataGrid SelectedItem="{Binding Producto}" CanUserAddRows="False" AutoGenerateColumns="False" Margin="1" ItemsSource="{Binding Productos}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Cantidad}" Width=".3*" Header="Cantidad"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Descripcion}" Width=".7*" Header="Descripción"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

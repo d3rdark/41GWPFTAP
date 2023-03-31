@@ -1,0 +1,68 @@
+﻿<Window x:Class="ProtectoUnidad1.ContadorDigital"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProtectoUnidad1" xmlns:sytem="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="" Height="311.555" Width="560.27">
+    <DockPanel>
+        <DockPanel.DataContext>
+            <local:Contador></local:Contador>
+        </DockPanel.DataContext>
+        <WrapPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center">
+            <WrapPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="10 0 0 5"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    
+                </Style>
+            </WrapPanel.Resources>
+            <Button Content="Mas un punto" Command="{Binding ComandoMasMenos}" Background="Blue">
+                <Button.CommandParameter>
+                    <sytem:Boolean>true</sytem:Boolean>
+                </Button.CommandParameter>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Menos un punto" Command="{Binding ComandoMasMenos}" Background="Green">
+                <Button.CommandParameter>
+                    <sytem:Boolean>false</sytem:Boolean>
+                </Button.CommandParameter>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Reiniciar" Command="{Binding ComandoLimpiar}" Background="Red">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </WrapPanel>
+        <Grid Margin="20 10">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="120"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="10 0"/>
+                </Style>
+            </Grid.Resources>
+            <Border BorderBrush="Black" BorderThickness="20" Background="#333F48">
+                <TextBlock Text="{Binding Puntuacion}" ></TextBlock>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

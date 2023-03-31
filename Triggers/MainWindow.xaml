@@ -1,0 +1,94 @@
+﻿<Window x:Class="Triggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Triggers"
+        mc:Ignorable="d"
+        Title="Ejercicio" Height="487" Width="860" Background="#FEA410">
+    <DockPanel Margin="40" Background="#FFF">
+        <UniformGrid DockPanel.Dock="Bottom" Margin="0" Columns="2">
+            <UniformGrid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="0 8"/>
+                </Style>
+            </UniformGrid.Resources>
+            <Button Background="#007F0A">Agregar al carrito</Button>
+            <Button Background="#A42A29">Agregar a la lista de deseos</Button>
+        </UniformGrid>
+
+        <UniformGrid Columns="2">
+            <Image Margin="0 10">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=cmbColor, Path=SelectedItem.Content}" Value="Verde">
+                                <Setter Property="Source" Value="https://m.media-amazon.com/images/I/61D0L4IreBL._AC_SX466_.jpg"></Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=cmbColor, Path=SelectedItem.Content}" Value="Blanco">
+                                <Setter Property="Source" Value="https://http2.mlstatic.com/D_NQ_NP_714538-MLM47771711178_102021-O.webp%22%3E%3C/Setter%3E"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=cmbColor, Path=SelectedItem.Content}" Value="Rojo">
+                                <Setter Property="Source" Value="https://http2.mlstatic.com/D_NQ_NP_759521-MLM28335524380_102018-O.jpg%22%3E%3C/Setter%3E"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+            <StackPanel Margin="10">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="TextWrapping" Value="Wrap"/>
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="FontSize" Value="15"/>
+                    </Style>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="SelectedIndex" Value="0"/>
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="Margin" Value="0 0 5 0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Foreground="Black">Arbol de navidad clásico</TextBlock>
+                <TextBlock FontSize="15">Sin decoracion</TextBlock>
+                <Label  FontSize="15" Foreground="Black">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=cmbTamaño, Path=SelectedItem.Content}" Value="Mediano">
+                                    <Setter Property="Content" Value="$1200"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=cmbTamaño, Path=SelectedItem.Content}" Value="Chico">
+                                    <Setter Property="Content" Value="$550"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=cmbTamaño, Path=SelectedItem.Content}" Value="Grande">
+                                    <Setter Property="Content" Value="$1500"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+                <TextBlock FontSize="15" Margin="0 0 5 5" TextAlignment="Justify">Luce tus decoraciones de Navidad con este clasico
+                arbol de navidad. Viene en colores Verde, Blanco (nevado)
+                o Rojizo y en tres tipos de tamaño a elegir.</TextBlock>
+                <Label Content="Tamaño:"></Label>
+                <ComboBox Name="cmbTamaño">
+                    <ComboBoxItem>Mediano</ComboBoxItem>
+                    <ComboBoxItem>Chico</ComboBoxItem>
+                    <ComboBoxItem>Grande</ComboBoxItem>
+                </ComboBox>
+
+                <Label Content="Color:" Margin="0 5 0 0"></Label>
+                <ComboBox Name="cmbColor">
+                    <ComboBoxItem>Verde</ComboBoxItem>
+                    <ComboBoxItem>Blanco</ComboBoxItem>
+                    <ComboBoxItem>Rojo</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </UniformGrid>
+    </DockPanel>
+</Window>

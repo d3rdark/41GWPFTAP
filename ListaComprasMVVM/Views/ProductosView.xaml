@@ -1,0 +1,41 @@
+﻿<RibbonWindow x:Class="ListaComprasMVVM.Views.ProductosView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:viewmodels="clr-namespace:ListaComprasMVVM.ViewModels" xmlns:local="clr-namespace:ListaComprasMVVM.Views"
+              mc:Ignorable="d" Height="450" Width="800" Background="#DFE9F5">
+    <RibbonWindow.DataContext>
+        <viewmodels:ProductosViewModels></viewmodels:ProductosViewModels>
+    </RibbonWindow.DataContext>
+
+    <Grid>
+        <local:VerProductosView></local:VerProductosView>
+
+        <ContentControl>
+            <ContentControl.Resources>
+                <local:AgregarProductoView x:Key="agregar"></local:AgregarProductoView>
+                <local:EditarProductoView x:Key="editar"></local:EditarProductoView>
+                <local:EliminarProductosView x:Key="eliminar"></local:EliminarProductosView>
+            </ContentControl.Resources>
+            <ContentControl.Style>
+                <Style TargetType="ContentControl">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Vista}" Value="agregar">
+                            <Setter Property="Content" Value="{StaticResource agregar}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Vista}" Value="editar">
+                            <Setter Property="Content" Value="{StaticResource editar}"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Vista}" Value="eliminar">
+                            <Setter Property="Content" Value="{StaticResource eliminar}"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
+    </Grid>
+    
+    
+    
+</RibbonWindow>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="Navegacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Navegacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="550">
+    <Window.Resources>
+        <StackPanel Margin="10" x:Key="datosAlumno">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock>Datos del Alumno:</TextBlock>
+            <Label>Número de control:</Label>
+            <TextBox></TextBox>
+            <Label>Nombre:</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+        <StackPanel Margin="10" x:Key="datosMaestro">
+            <TextBlock>Datos del Maestro:</TextBlock>
+            <Label>Número de empleado:</Label>
+            <TextBox></TextBox>
+            <Label>Nombre:</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+    </Window.Resources>
+    
+    <DockPanel>
+        <ListBox DockPanel.Dock="Left" Name="lstMenu">
+            <ListBoxItem>Datos del Alumno</ListBoxItem>
+            <ListBoxItem>Datos del Maestro</ListBoxItem>
+        </ListBox>
+
+        <ContentControl>
+            <ContentControl.Style>
+                <Style TargetType="ContentControl">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=lstMenu, Path=SelectedIndex}" Value="1">
+                            <Setter Property="Content" Value="{StaticResource datosMaestro}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=lstMenu, Path=SelectedIndex}" Value="0">
+                            <Setter Property="Content" Value="{StaticResource datosAlumno}"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
+    </DockPanel>
+</Window>

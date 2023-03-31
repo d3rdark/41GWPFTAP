@@ -1,0 +1,56 @@
+﻿<Window x:Class="Enlace.VentanaAreaPerimetro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Enlace"
+        mc:Ignorable="d"
+        Title="VentanaAreaPerimetro" Height="450" Width="400">
+    <Window.DataContext>
+        <local:Rectangulo ></local:Rectangulo>
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="0,0,0,5"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="0,0,0,5"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+
+
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="10">
+
+
+        <TextBlock>Escribe las medidas del rectangulo:</TextBlock>
+
+        <DockPanel>
+            <Label>Altura:</Label>
+            <TextBox Text="{Binding Altura}"></TextBox>
+        </DockPanel>
+        <DockPanel>
+            <Label>Ancho:</Label>
+            <TextBox Text="{Binding Ancho}"></TextBox>
+        </DockPanel>
+
+        <TextBlock>Resultado:</TextBlock>
+        <DockPanel>
+            <Label>Area:</Label>
+            <TextBlock Text="{Binding Area}"></TextBlock>
+        </DockPanel>
+
+        <DockPanel>
+            <Label>Perimetro:</Label>
+            <TextBlock Text="{Binding Perimetro}"></TextBlock>
+        </DockPanel>
+
+    </StackPanel>
+</Window>

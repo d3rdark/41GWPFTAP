@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMXamarin.Views.ListaAlumnosView" BackgroundColor="LightGray">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout.Resources>
+                <Style TargetType="Grid">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Margin" Value="0,5"/>
+                </Style>
+            </StackLayout.Resources>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.RowSpan="2" Source="https://intertec.tec-carbonifera.edu.mx/fotos/al/20/201g0266.jpg"></Image>
+                <Label Grid.Row="0" Grid.Column="1"
+                   TextColor="LightGray" >201G0266</Label>
+                <Label FontAttributes="Bold" TextColor="Black"
+                   Grid.Column="1" TextTransform="Uppercase" Grid.Row="1">Carlos Daniel Maldonado Muñoz</Label>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
