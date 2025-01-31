@@ -19,15 +19,27 @@
     </Window.Resources>
     <DockPanel>
         <DockPanel Margin="20">
-            <Button Command="{Binding CambiarVistaCommand}" CommandParameter="Agregar" Margin="0,5,0,0" FontWeight="Bold" Background="#DC895D" DockPanel.Dock="Bottom" Height="40">
+            <Button Command="{Binding CambiarVistaCommand}" 
+                    CommandParameter="Agregar" 
+                    Margin="0,5,0,0" 
+                    FontWeight="Bold" 
+                    Background="#DC895D" 
+                    DockPanel.Dock="Bottom" 
+                    Height="40">
                 Nueva Pelicula
             </Button>
-            <ListBox x:Name="lst1" SelectedItem="{Binding Pelicula}" ItemsSource="{Binding PeliculasOrdenadas}"
-                     Margin="0,5,0,0" DockPanel.Dock="Left" ScrollViewer.CanContentScroll="False" Background="White">
+            <ListBox x:Name="lst1" 
+                     SelectedItem="{Binding Pelicula}" 
+                     ItemsSource="{Binding PeliculasOrdenadas}"
+                     Margin="0,5,0,0" 
+                     DockPanel.Dock="Left" 
+                     ScrollViewer.CanContentScroll="False" 
+                     Background="White">
                 <ListBox.ContextMenu>
                     <ContextMenu>
                         <MenuItem Command="{Binding CambiarVistaCommand}" CommandParameter="Editar" Header="Editar"></MenuItem>
                         <MenuItem Click="MenuItem_Click" Header="Eliminar"></MenuItem>
+                        <MenuItem Command="{Binding VerDatosCommand}" Header="Ver datos" CommandParameter="VerDatos"></MenuItem>
                     </ContextMenu>
                 </ListBox.ContextMenu>
             </ListBox>

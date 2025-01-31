@@ -31,7 +31,7 @@
             <Setter Property="Padding" Value="30, 5"/>
             <Setter Property="Margin" Value="0,10,10,0"/>
             <Setter Property="Foreground" Value="White"/>
-        </Style>
+        </Style>    
     </UserControl.Resources>
 
     <StackPanel>
